@@ -3,5 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    $nb = 3;
+    return view('welcome', ['nb' =>$nb]);
+});
+
+Route::get('/register', function(){
+    return view('register');
 });
