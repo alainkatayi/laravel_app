@@ -1,4 +1,5 @@
 <?php
+use App\Models\Gens;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -12,6 +13,14 @@ Route::get('/register', function(){
 });
 
 Route::post('/register', function(Request $request){
-    dd($request ->all());
-    return "Envoiyer";
+    //dd($request ->all());
+    //incetion dans la base de données
+    $perso = Gens::create([
+        'name' => $request->name,
+        'username'=> $request->username,
+        'sexe'=>$request->sexe
+
+
+    ]);
+    return "Envoyer";
 });

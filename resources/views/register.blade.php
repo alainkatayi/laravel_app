@@ -16,6 +16,9 @@
         <label for="username">username</label><br>
         <input type="text" name ="username" placeholder ="username" > <br> <br>
 
+        <label for="sexe">Sexe</label><br>
+        <input type="text" name ="sexe" placeholder ="sexe" > <br> <br>
+
         <button type="submit" >Enregister</button>
     </form>
     <a href="{{ url('/') }}">Back</a>
