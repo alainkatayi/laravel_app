@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -9,4 +9,9 @@ Route::get('/', function () {
 
 Route::get('/register', function(){
     return view('register');
+});
+
+Route::post('/register', function(Request $request){
+    dd($request ->all());
+    return "Envoiyer";
 });
