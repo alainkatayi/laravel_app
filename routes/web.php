@@ -11,3 +11,7 @@ Route::get('/',[GensControler::class, 'home']);
 Route::get('/register', [GensControler::class, 'register']);
 
 Route::post('/register',[GensControler::class, 'register_add']);
+
+Route::get('/tracking', [GensControler::class, 'traking_index']);
+
+Route::post('/tracking', [GensControler::class, 'tracking_search']);

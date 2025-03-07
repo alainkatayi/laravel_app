@@ -13,7 +13,8 @@ class Gens extends Model
     protected $fillable = [
         'name',
         'username',
-        'sexe'
+        'sexe',
+        'tracking_number'
 
     ];
 }

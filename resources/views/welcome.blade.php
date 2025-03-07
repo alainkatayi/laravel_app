@@ -15,6 +15,7 @@
         <p>Il y'a aucun nombre</p>
     @endif
 
-    <a href="{{ url('/register') }}">Register</a>
+    <a href="{{ url('/register') }}">Register</a> <br>
+    <a href="{{ url('/tracking') }}">Suivre une personne</a>
 </body>
 </html>
