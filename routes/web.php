@@ -2,25 +2,12 @@
 use App\Models\Gens;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    $nb = 3;
-    return view('welcome', ['nb' =>$nb]);
-});
-
-Route::get('/register', function(){
-    return view('register');
-});
-
-Route::post('/register', function(Request $request){
-    //dd($request ->all());
-    //incetion dans la base de données
-    $perso = Gens::create([
-        'name' => $request->name,
-        'username'=> $request->username,
-        'sexe'=>$request->sexe
+use Illuminate\Support\Facades\Validator;
+use App\Http\Controllers\GensControler;
 
 
-    ]);
-    return "Envoyer";
-});
+Route::get('/',[GensControler::class, 'home']);
+
+Route::get('/register', [GensControler::class, 'register']);
+
+Route::post('/register',[GensControler::class, 'register_add']);
